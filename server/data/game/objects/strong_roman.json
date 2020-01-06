@@ -1,0 +1,18 @@
+{
+    "userid": "admin",
+    "name": "strong_roman",
+    "datatype": "object",
+    "payload": {
+        "type": "target",
+        "name": "strong_roman",
+        "height": 120,
+        "width": 120,
+        "texture": "./static/images/textures/roman_soldier1.png",
+        "crop": 240,
+        "hp": 1,
+        "shape": "rectangle",
+        "friction": 1,
+        "mass": 80,
+        "restitution": 0
+    }
+}

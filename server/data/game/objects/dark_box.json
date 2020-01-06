@@ -1,0 +1,18 @@
+{
+    "userid": "admin",
+    "name": "dark_box",
+    "datatype": "object",
+    "payload": {
+        "type": "collidable",
+        "name": "dark_box",
+        "height": 75,
+        "width": 75,
+        "texture": "./static/images/textures/box3.png",
+        "crop": 0,
+        "hp": 1,
+        "shape": "rectangle",
+        "friction": 0.2,
+        "mass": 20,
+        "restitution": 0
+    }
+}

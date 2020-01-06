@@ -1,0 +1,18 @@
+{
+    "userid": "admin",
+    "name": "moss_wall",
+    "datatype": "object",
+    "payload": {
+        "type": "static",
+        "name": "moss_wall",
+        "height": 75,
+        "width": 75,
+        "texture": "./static/images/textures/wall3.png",
+        "crop": 0,
+        "hp": 1,
+        "shape": "rectangle",
+        "friction": 0.7,
+        "mass": 100,
+        "restitution": 0
+    }
+}

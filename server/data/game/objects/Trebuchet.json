@@ -1,0 +1,18 @@
+{
+    "userid": "admin",
+    "name": "Trebuchet",
+    "datatype": "object",
+    "payload": {
+        "type": "catapult",
+        "name": "Trebuchet",
+        "height": 165,
+        "width": 165,
+        "texture": "./static/images/textures/trebuchet.png",
+        "crop": 1980,
+        "hp": 1,
+        "shape": "rectangle",
+        "friction": 1,
+        "mass": 50,
+        "restitution": 0
+    }
+}

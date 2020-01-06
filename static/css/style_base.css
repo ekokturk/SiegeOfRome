@@ -1,0 +1,260 @@
+ /* @copyright: Copyright (C) 2019  Eser Kokturk. All Rights Reserved. */
+*{
+    /* Text colors */
+    --text-col-light: white;
+    --text-col-error: red;
+
+    /* Theme colors */
+    --col-light-high: #ADADAD;
+    --col-light-low: #696969;
+    --col-medium-high: #484848;
+    --col-medium-low: #333333;
+    --col-dark-high: #252526;
+    --col-dark-low: #1E1E1E;
+    --pointer: url("../images/game-cursor-pointer.png")
+}
+
+*{
+    font-size: 16px;
+    color: var(--text-col-light);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background:  no-repeat center center fixed, no-repeat center center fixed;
+    background-image: radial-gradient(rgba(165, 42, 42, 0.445) 20%,rgba(0, 0, 0, 0.726)),url("../images/wallpaper.jpg");
+    background-size: 100% 100%;
+}
+
+input{background: var(--col-dark-low);}
+.hide{ display: none;}
+.full-height{height: 100%;}
+.full-width{ width: 100%;}
+
+.header{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background: transparent;
+}
+
+.footer{
+    margin-top: 15px;
+    color: var(--col-medium-high);
+    text-align: center;
+    user-select: none;
+}
+
+hr{
+    border: 1px solid var(--col-medium-high);
+    width: 100%;
+}
+
+.vl{
+  border-left: 3px solid var( --col-light-low);
+  height: 100%;
+  width: 3px;
+  margin: 0 5px;
+}
+
+/* _________________ DEBUG _______________________*/
+.debug-menu{
+    padding-top: 20px;
+    height: 90px;
+    margin: 0 20px;
+    margin-bottom: 20px;
+    overflow: auto;
+    overflow-x: hidden;
+    border: 2px solid var(--col-medium-low);
+    text-align: center;
+    border-radius: 10px;
+    background: var(--col-dark-low);
+}
+.debug-menu::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+.debug-error {
+    color: darkred;
+    font-weight: bold;
+}
+.debug-input{
+    background-color: darkred;
+}
+.debug-text { 
+    color: var( --col-light-low);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* _________________ FLEXBOX _______________________*/
+.flx{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.flx-row{ flex-direction: row; }
+.flx-col{ flex-direction: column; }
+
+
+/* _________________ BUTTON _______________________*/
+.btn{
+    background-color: var(--col-medium-low);
+    border: outset  var(--col-light-low) 3px;
+    border-radius: 8px;
+    color: white;
+    padding: 1em;
+    font-weight: 700;
+    margin: .5em;
+    cursor: var(--pointer), pointer;
+    text-align: center;
+    outline: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.btn:hover{
+    background: var(--col-light-high);
+}
+
+.btn:active{
+    background-color: var(--col-medium-high);
+    
+    color: rgba(255, 255, 255, 0.671);
+}
+.btn[disabled]{
+    border: solid  var(--col-light-low) 3px;
+
+    background-color: var(--col-light-low);
+    cursor: default;
+}
+/* _________________ MODAL _______________________*/
+
+/* The Modal (background) */
+.modal {
+    position: fixed; 
+    z-index: 10; 
+    padding-top: 200px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    overflow-y: hidden;
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+/* Modal Content */
+.modal-content {
+    background: var(--col-medium-low);
+    margin: auto;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    border: solid var(--col-medium-high) 4px;
+    width: 1150px;
+    height: 450px;
+}
+/* Input field of modal */
+.modal-input{
+    width: 200px;
+    text-align: center;
+    text-align-last: center;
+}
+.modal-label{
+    padding: 0 35px;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px var(--col-dark-high);
+
+}
+
+.modal-title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 4px 4px 4px var(--col-dark-high);
+}
+
+
+/* _________________ TAB _______________________*/
+.tab{
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 22px;
+    width: 100%;
+    padding: 15px;
+    font-weight: 700;
+    cursor: var(--pointer), pointer;
+    text-align: center;
+    text-shadow: 2px 2px 3px var(--col-dark-high);
+
+}
+
+.tab-on{ background-color: var(--col-medium-high) }
+
+.tab-off{ background-color: var(--col-light-low) }
+
+/* _________________ INPUT FIELD _______________________*/
+.input-field{
+    color: white;
+    border-radius: 4px;
+    border-color: var( --col-light-low);
+}
+
+.input-field:hover{
+    border-color: var( --col-light-low);
+}
+
+.input-field:focus{
+    outline-color: white;
+}
+
+.input-field:disabled{
+    background-color: var(--col-medium-low);
+}
+
+.input-field:read-only{
+    background-color: var(--col-medium-low);
+}
+
+
+/* _________________ SCROLLBAR _______________________*/
+/* Scoreboard table scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(80, 65, 65); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(110, 110, 110); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(180, 180, 180); 
+}
+/* _________________ SELECT _______________________*/
+
+select {
+    outline: none;
+    background: var(--col-dark-low);
+}
+
+select option:focus {
+    background-color:#FFF;
+    outline:none;
+    border:none;
+    box-shadow:none;
+}
+
+
+

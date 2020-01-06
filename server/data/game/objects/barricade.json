@@ -1,0 +1,18 @@
+{
+    "userid": "admin",
+    "name": "barricade",
+    "datatype": "object",
+    "payload": {
+        "type": "static",
+        "name": "barricade",
+        "height": 120,
+        "width": 120,
+        "texture": "./static/images/textures/barricade1.png",
+        "crop": 0,
+        "hp": 1,
+        "shape": "rectangle",
+        "friction": 1,
+        "mass": 50,
+        "restitution": 0.1
+    }
+}

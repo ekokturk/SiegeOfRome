@@ -1,0 +1,527 @@
+ /* @copyright: Copyright (C) 2019  Eser Kokturk. All Rights Reserved. */
+*{
+    /* Text colors */
+    --text-col-light: white;
+    --text-col-error: red;
+
+    /* Theme colors */
+    --col-light-high: #ADADAD;
+    --col-light-low: #696969;
+    --col-medium-high: #484848;
+    --col-medium-low: #333333;
+    --col-dark-high: #252526;
+    --col-dark-low: #1E1E1E;
+    --pointer: url("../images/game-cursor-pointer.png")
+}
+@font-face {
+  font-family: Rome;
+  src: url("../fonts/DIOGENES.ttf");
+}
+
+*{
+    --game-area-width: 1280px;
+    --game-area-height: 720px;
+     cursor: url("../images/game-cursor-default.png"), default;
+}
+
+.font-rome{
+    font-family: Rome;
+    letter-spacing: 4px;
+}
+
+/* _________________ MAIN MENU _______________________*/
+
+.main-menu-title{
+    font-weight: bold;
+    padding: 15px;
+    font-size: 40px;
+    text-align: center;
+    user-select: none;
+
+}
+
+.main-menu-img{
+    background-image: url("../images/backgrounds/background1.jpg");
+    width: 800px;
+    height: 500px;
+    background-size: 100% 100%;
+    border: 3px solid black;
+    border-radius: 30px;
+    cursor: var(--pointer), pointer;
+    border: outset brown 10px;
+
+}
+
+
+.play-btn{
+    background-image: url("../images/play_button.jpg");
+ }
+.play-btn:hover{
+    background-image: linear-gradient(to right, #ffffff41, #ffffff42), 
+                        url("../images/play_button.jpg");
+ }
+ .editor-btn{
+    background-image: url("../images/editor_button.jpg");
+ }
+.editor-btn:hover{
+    background-image: linear-gradient(to right, #ffffff41, #ffffff42), 
+                        url("../images/editor_button.jpg");
+ }
+
+
+.main-menu-opt{
+    margin: 30px;
+}
+
+.main-menu-opt-title{
+    font-family: Rome;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    text-shadow: 2px 2px 3px var(--col-dark-high);
+    letter-spacing: 4px;
+    user-select: none;
+
+}
+
+.mainmenu-btn{
+    background-color: var(--col-medium-high);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 350px;
+    align-self: center;
+    background-size: 100% 100%;
+}
+
+
+.mainmenu-info{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    color:var(--col-light-high)
+}
+
+.user-modal{
+    width: 400px;
+    height: 400px;
+}
+
+/* Editor application container */
+#editor-wrapper{
+    margin: 5px 0 5px;
+}
+/* Viewport and library container */
+#editor-area{
+    margin-left: 10px;
+}
+/* Side Menu tabs */
+#editor-tabs{
+    background: var(--col-dark-low);
+}
+/* _________________ VIEWPORT _______________________*/
+/* Level viewport that contains all the items */
+.viewport{
+    background-image:  url('../images/loading_screen.jpg');
+    background-size:  100%;
+    background-repeat: no-repeat;
+    height: var(--game-area-height);
+    width: var(--game-area-width);
+    overflow: hidden;
+    outline: black solid 3px;
+    position: relative;
+}
+/* Main class for level objects */
+.game-item{
+    display:inline-block;
+    width: 100px; 
+    height: 100px;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.game-item:hover{
+    cursor: grab;
+    outline: 2px var(--col-light-high) solid;
+}
+.game-item:active{cursor: grabbing;}
+.game-item-select{outline: 3px white dashed;}
+.game-item-select:hover{outline: 3px white dashed;}
+.game-item-select:active{outline: 3px white dashed;}
+
+/* _________________ LIBRARY _______________________*/
+/* Library container for items and add button */
+#editor-library{
+    margin-top: 5px;
+    width: var(--game-area-width);
+}
+/* Container for library items */
+#library-items-container{
+    width: 100%;
+    justify-content: left;
+    overflow: auto;
+    overflow-x: scroll;
+    background-color: var(--col-medium-low);
+}
+#library-items{
+    background-color: var(--col-medium-low);
+    align-items: center;
+}
+/* Library item */
+.lib-item{
+    width: 100px; 
+    height: 100px;
+    background-size: 100% 100%;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    margin: 0 5px;
+    z-index: 4;
+}
+.lib-item:hover{
+    outline: 2px var(--col-light-high) solid;
+    cursor: grab;
+}
+.lib-item:active{cursor: grabbing;}
+/* Button to add new item to library */
+.add-btn{
+    background: url("../images/icon_plus.png"),var(--col-medium-high);
+    border-top-right-radius: 8px; 
+    height: 117px;
+    padding-left: 100px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    cursor: var(--pointer), pointer;
+}
+.add-btn:hover{background-color: var(--col-light-low);}
+.add-btn:active{
+    background-color: var(--col-medium-low);
+    color: var(--col-light-high);
+}
+
+/* _________________ SIDE MENU _______________________*/
+.side-menu
+{
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: var(--col-medium-high);
+}
+
+.side-menu-options{
+    height: 600px;
+    width: 600px;
+}
+
+.side-menu-form{
+    width: 100%;
+    padding-top: 15px;
+}
+/* Input field label */
+.side-menu-label{
+    font-size: 18px;
+    padding: 0 10px;
+    margin-right: 15px;
+    text-align: left;
+}
+.side-menu-title{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 2px 2px 3px var(--col-dark-high);
+    user-select: none;
+}
+.side-menu-btn{
+    width: 230px;
+    align-self: center;
+}
+hr.side {
+    width: 80%;
+    border-top: 3px solid var(--col-dark-high);
+}
+
+.level-select{
+    width:70%;
+    align-self:center;
+    text-align-last:center;
+}
+
+.level-select option{
+    align-self: center;
+}
+
+.level-input{
+    width:390px;
+    text-align-last:left;
+}
+
+.level-data-input{
+    text-align: center;
+    text-align-last:center;
+}
+
+.level-label{
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.level-target-count{
+    text-align: center;
+    background: var(--col-dark-high);
+
+}
+
+
+/* _________________ MODAL _______________________*/
+#modal-viewport{
+    background-color: var(--col-dark-low);
+    outline: 4px solid var(--col-medium-high);
+    position: relative;
+    width: 550px;
+    height: 400px;
+    margin-right: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.modal-view:hover{
+    cursor: grab;
+    outline: 2px solid var(--col-light-low);
+}
+.modal-view:active{cursor: grabbing;}
+
+/* _________________ CONTEXT MENU _______________________*/
+#ctx-menu{
+    position: absolute;
+    z-index: 5;
+    padding: 8px;
+    border-radius: 5px;
+    border: solid var(--col-medium-high) 3px;
+    background: var(--col-dark-low);
+}
+.ctx-title{
+    text-align: center;
+    font-weight: bold;
+    color: var(--col-light-low);
+}
+
+.ctx-btn{
+    border-radius: 5px;
+    margin: 0;
+    margin-bottom: 3px;
+    padding: 5px 20px;
+}
+
+/* _________________ OBJECT LIST _______________________*/
+/* Selected object details form */
+.object-form{
+    margin: 0 20px;
+    background-color: var(--col-medium-high);
+}
+/* Input field label for object form */
+.object-form-label{
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px var(--col-dark-high);
+}
+
+hr.object-break{
+    display: block;
+    margin: 3px 0;
+}
+
+.object-input-num{
+    width: 100px;
+    text-align-last:center;
+    margin: 0 auto;
+}
+
+.object-input-txt{
+    width: 460px;
+    text-align: center;
+
+}
+
+.object-move-btn{
+    margin: 0;
+    padding: 5px 0;
+    border-radius: 2px;
+}
+
+/* ======================================= GAME =============================================*/
+#game-wrapper{
+    cursor: none;
+}
+
+.cursor-target{
+    position: absolute; 
+    color: white; 
+    font-size:40px;
+    width: 50px;
+    height: 50px; 
+    background-image: url("../images/icon_target.png"); 
+    background-size: 100% 100%; 
+    z-index: 5;
+    cursor: none;
+}
+
+.cursor-target-power{
+    position: absolute; 
+    width: 50px;
+    height: 50px; 
+    clip-path: inset(50px 0px 0px 0px);
+    background-image: url("../images/icon_target_power.png"); 
+    background-size: 100% 100%; 
+    cursor: none;
+}
+
+#game-area{
+    margin-top: 30px;
+}
+
+.game-side-level-section{
+    margin-top: 170px;
+    margin-bottom: 50px;
+    height: 50px;
+}
+
+.game-side-state-section{
+    margin: 50px 0;
+    height: 100px;
+}
+.game-side-state-section div{
+    margin: 0 10px;
+}
+
+.game-side-buttons-section{
+    margin: 20px 0;
+}
+
+.game-title-xlg{
+    margin-bottom: 30px;
+    margin-top: 100px;
+    font-family: Rome;
+    text-align: center;
+    color: brown;
+    text-shadow: 2px 6px 8px var(--col-dark-high);
+    letter-spacing: 3px;
+    font-size: 70px;
+    user-select: none;
+
+}
+
+.game-title-lg{
+    font-family: Rome;
+    text-align: center;
+    text-shadow: 2px 2px 3px var(--col-dark-high);
+    letter-spacing: 3px;
+    font-size: 50px;
+    user-select: none;
+}
+
+.game-title-md{
+    font-family: Rome;
+    text-align: center;
+    text-shadow: 2px 2px 3px var(--col-dark-high);
+    letter-spacing: 3px;
+    font-size: 30px;
+    user-select: none;
+}
+
+#game-viewport{
+    /* background: url("../images/backgrounds/background1.jpg"); */
+    font-family: Rome;
+    overflow: hidden;
+    background-color:black;
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    background-size: 100% 100%;
+    outline: black solid 3px;
+    cursor: none;
+    background-image: url("../images/loading_screen.jpg");
+
+}
+
+#game-side{
+    font-family: Rome;
+    /* background: #333333; */
+    background-image: url("../images/Parchment.png");
+    background-size: 100% 100%;
+    width: 400px;
+    height: 720px;
+    justify-content: flex-start;
+
+    /* outline: black solid 3px; */
+}
+
+.game-side-cols{
+    font-family: Rome;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.game-btn{
+    border: outset rgb(78, 40, 8) 3px;
+    background-color: rgb(139, 87, 37);
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 3px var(--col-dark-high);
+    font-family: Rome;
+}
+
+.game-btn[disabled]{
+    border: none;
+    border: solid rgb(110, 75, 41) 2px;
+    background-color: rgb(165, 110, 59);
+    text-shadow: none;
+
+}
+
+/* _________________ GAME POPUP WINDOW _______________________*/
+.game-popup-bg{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.game-popup-victory{
+    background-image: url("../images/popup_victory.jpg");
+}
+
+.game-popup-defeat{
+    background-image: url("../images/popup_defeat.jpg");
+}
+
+.game-popup{
+    width: 800px;
+    height: 475px;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 15;
+    top: 120px;
+    left: 240px;
+    cursor: auto;
+    border: outset brown 8px;
+    border-radius: 25px;
+}
+
+.game-star-popup{
+    background-size: 100% 100%;
+    width:100px;
+    height:100px;
+}
+
+.game-star-win{
+    background-image: url("../images/star_win.png");
+}
+
+.game-star-lose{
+    background-image: url("../images/star_lose.png");
+}
+

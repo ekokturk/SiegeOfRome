@@ -1,0 +1,276 @@
+{
+    "userid": "admin",
+    "name": "level-1",
+    "datatype": "level",
+    "payload": {
+        "ammo": 3,
+        "score": {
+            "star1": 0,
+            "star2": 1,
+            "star3": 2
+        },
+        "background": "./static/images/backgrounds/castle2.jpg",
+        "objects": [
+            {
+                "id": 0,
+                "pos": {
+                    "x": 0,
+                    "y": 420
+                },
+                "entity": {
+                    "type": "catapult",
+                    "name": "Trebuchet",
+                    "height": 300,
+                    "width": 300,
+                    "texture": "./static/images/textures/trebuchet.png",
+                    "crop": 3600,
+                    "shape": "rectangle",
+                    "friction": 0,
+                    "mass": 50,
+                    "restitution": 0,
+                    "hp": 1
+                }
+            },
+            {
+                "id": 1,
+                "pos": {
+                    "x": 853,
+                    "y": 520
+                },
+                "entity": {
+                    "type": "target",
+                    "name": "strong-roman",
+                    "height": 200,
+                    "width": 200,
+                    "texture": "./static/images/textures/roman_soldier1.png",
+                    "crop": 400,
+                    "shape": "rectangle",
+                    "friction": 0.8,
+                    "mass": 70,
+                    "restitution": 0,
+                    "hp": 1
+                }
+            },
+            {
+                "id": 2,
+                "pos": {
+                    "x": 527,
+                    "y": 645
+                },
+                "entity": {
+                    "type": "collidable",
+                    "name": "Box75",
+                    "height": 75,
+                    "width": 75,
+                    "texture": "./static/images/textures/box3.png",
+                    "crop": 0,
+                    "shape": "rectangle",
+                    "friction": 0.4,
+                    "mass": 50,
+                    "restitution": 0,
+                    "hp": 1
+                }
+            },
+            {
+                "id": 3,
+                "pos": {
+                    "x": 528,
+                    "y": 569
+                },
+                "entity": {
+                    "type": "collidable",
+                    "name": "Box75(1)",
+                    "height": 75,
+                    "width": 75,
+                    "texture": "./static/images/textures/box3.png",
+                    "crop": 0,
+                    "shape": "rectangle",
+                    "friction": 0.4,
+                    "mass": 50,
+                    "restitution": 0,
+                    "hp": 1
+                }
+            },
+            {
+                "id": 4,
+                "pos": {
+                    "x": 528,
+                    "y": 494
+                },
+                "entity": {
+                    "type": "collidable",
+                    "name": "Box75(2)",
+                    "height": 75,
+                    "width": 75,
+                    "texture": "./static/images/textures/box3.png",
+                    "crop": 0,
+                    "shape": "rectangle",
+                    "friction": 0.4,
+                    "mass": 50,
+                    "restitution": 0,
+                    "hp": 1
+                }
+            },
+            {
+                "id": 5,
+                "pos": {
+                    "x": 681,
+                    "y": 600
+                },
+                "entity": {
+                    "type": "static",
+                    "name": "barricade",
+                    "height": 120,
+                    "width": 120,
+                    "texture": "./static/images/textures/barricade1.png",
+                    "crop": 0,
+                    "shape": "rectangle",
+                    "friction": 0,
+                    "mass": 50,
+                    "restitution": 0,
+                    "hp": 1
+                }
+            },
+            {
+                "id": 6,
+                "pos": {
+                    "x": 332,
+                    "y": 516
+                },
+                "entity": {
+                    "type": "target",
+                    "name": "basic_roman",
+                    "height": 100,
+                    "width": 100,
+                    "texture": "./static/images/textures/roman_soldier2.png",
+                    "crop": 400,
+                    "shape": "rectangle",
+                    "friction": 1,
+                    "mass": 60,
+                    "restitution": 0,
+                    "hp": 1
+                }
+            },
+            {
+                "id": 7,
+                "pos": {
+                    "x": 393,
+                    "y": 616
+                },
+                "entity": {
+                    "type": "target",
+                    "name": "basic_roman(1)",
+                    "height": 100,
+                    "width": 100,
+                    "texture": "./static/images/textures/roman_soldier2.png",
+                    "crop": 400,
+                    "shape": "rectangle",
+                    "friction": 1,
+                    "mass": 60,
+                    "restitution": 0,
+                    "hp": 1
+                }
+            },
+            {
+                "id": 8,
+                "pos": {
+                    "x": 1102,
+                    "y": 620
+                },
+                "entity": {
+                    "type": "target",
+                    "name": "basic_roman(2)",
+                    "height": 100,
+                    "width": 100,
+                    "texture": "./static/images/textures/roman_soldier2.png",
+                    "crop": 400,
+                    "shape": "rectangle",
+                    "friction": 1,
+                    "mass": 60,
+                    "restitution": 0,
+                    "hp": 1
+                }
+            },
+            {
+                "id": 9,
+                "pos": {
+                    "x": 753,
+                    "y": 209
+                },
+                "entity": {
+                    "type": "static",
+                    "name": "stone_wall",
+                    "height": 75,
+                    "width": 75,
+                    "texture": "./static/images/textures/wall2.png",
+                    "crop": 0,
+                    "shape": "rectangle",
+                    "friction": 0.9,
+                    "mass": 100,
+                    "restitution": 0,
+                    "hp": 1
+                }
+            },
+            {
+                "id": 10,
+                "pos": {
+                    "x": 1049,
+                    "y": 91
+                },
+                "entity": {
+                    "type": "static",
+                    "name": "moss_wall",
+                    "height": 116,
+                    "width": 75,
+                    "texture": "./static/images/textures/wall3.png",
+                    "crop": 0,
+                    "shape": "rectangle",
+                    "friction": 0.7,
+                    "mass": 100,
+                    "restitution": 0,
+                    "hp": 1
+                }
+            },
+            {
+                "id": 11,
+                "pos": {
+                    "x": 291,
+                    "y": 610
+                },
+                "entity": {
+                    "type": "target",
+                    "name": "basic_roman(3)",
+                    "height": 100,
+                    "width": 100,
+                    "texture": "./static/images/textures/roman_soldier2.png",
+                    "crop": 400,
+                    "shape": "rectangle",
+                    "friction": 1,
+                    "mass": 60,
+                    "restitution": 0,
+                    "hp": 1
+                }
+            },
+            {
+                "id": 12,
+                "pos": {
+                    "x": 667,
+                    "y": 329
+                },
+                "entity": {
+                    "type": "static",
+                    "name": "barricade(1)",
+                    "height": 120,
+                    "width": 120,
+                    "texture": "./static/images/textures/barricade1.png",
+                    "crop": 0,
+                    "shape": "rectangle",
+                    "friction": 1,
+                    "mass": 50,
+                    "restitution": 0.1,
+                    "hp": 1
+                }
+            }
+        ]
+    }
+}
