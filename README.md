@@ -10,6 +10,9 @@ An Angry Birds style puzzle web game developed with **JQuery**, **Box2D** and **
 - Host the directory with a web server and navigate to index.php
 - To log in type 'admin' as both username and password
 
+## **Play**
+- Go to http://www.eserkokturk.com/games/Siege-Of-Rome/
+- User ID: admin | password: admin
 ---
 
 ## **Screenshots**
